@@ -55,7 +55,9 @@ function  CourseTypeList() {
     fetchData();
   }, [updateCounter, search]);
 
+  //useState是一个ReactHooks的用法
   const [modalVisible, setModalVisible] = useState(false);
+  
   const toggleModal = () => {
     if (modalVisible) {
       setCourseTypeID();
