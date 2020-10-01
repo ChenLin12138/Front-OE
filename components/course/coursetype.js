@@ -56,6 +56,9 @@ function  CourseTypeList() {
   }, [updateCounter, search]);
 
   //useState是一个ReactHooks的用法
+  //当我们用函数而不是类来写组件的时候，函数要用到state，那么我们就通过useState使用state.
+  //第一个元素是state的对象内容，第二个对象等价于setState方法
+  //调用setState方法后，数据发生变化，页面会重新渲染
   const [modalVisible, setModalVisible] = useState(false);
   
   const toggleModal = () => {
@@ -89,6 +92,7 @@ function  CourseTypeList() {
         </Button>
       </div>
       <br />
+      {/* 这里向EditCourseTypeModal传入4个props */}
       <EditCourseTypeModal
         visible={modalVisible}
         handleCourseTypeAdded={handleCourseTypeAdded}
